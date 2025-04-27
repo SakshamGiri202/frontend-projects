@@ -1,0 +1,149 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #302d2d;
+    color: #fff;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  .nav-links a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: #cfcfcf;
+    font-weight: 500;
+  }
+  .nav-links a:hover {
+    color: #b49cff;
+  }
+  .auth-buttons .login,
+  .auth-buttons .signup {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .login {
+    background-color: #dcd2ff;
+    color: #0e0e0e;
+  }
+  .signup {
+    background-color: #b49cff;
+    color: #0e0e0e;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem;
+    flex-wrap: wrap;
+  }
+  
+  .text-content {
+    flex: 1;
+  }
+  .subtitle {
+    color: #b49cff;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+  .download-btn {
+    background-color: #dcd2ff;
+    color: #000;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  /* Phone Mockup */
+  .phone-mockup {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .phone {
+    background-color: #1c1c1c;
+    border-radius: 24px;
+    padding: 2rem;
+    width: 300px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  }
+  .welcome {
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  .cards {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .card {
+    padding: 1rem;
+    border-radius: 16px;
+    flex: 1;
+    font-size: 0.75rem;
+  }
+  .card.dark {
+    background-color: #3a3a3a;
+  }
+  .card.light {
+    background-color: #dcd2ff;
+    color: #000;
+  }
+  .info-boxes {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+  .box {
+    background-color: #fff;
+    color: #000;
+    border-radius: 16px;
+    padding: 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+    width: 48%;
+  }
+  .history .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #333;
+  }
+  .history .item span {
+    color: #b49cff;
+    margin-right: 0.5rem;
+  }
+  .history .item strong {
+    color: #dcd2ff;
+  }
+  
