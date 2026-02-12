@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+</head>
+<h1>check if the number is parlindrome or not</h1>
+
+<body>
+
+    <Script>
+        let input = prompt("Enter any number:");
+
+        function isPalindrome(val) {
+
+            let str = val.toString();
+            let reversed = "";
+
+            for (let i = str.length - 1; i >= 0; i--) {
+                reversed += str[i];
+            }
+
+            if (reversed === str) {
+                alert("Yes, it is a palindrome");
+            } else {
+                alert("No, it is not a palindrome");
+            }
+        }
+
+        isPalindrome(input);
+    </Script>
+</body>
+
+</html>

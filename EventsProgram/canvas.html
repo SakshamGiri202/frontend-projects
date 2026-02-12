@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas</title>
+    <style>
+        body {
+            background-color: rgba(110, 193, 241, 0.63);
+        }
+        
+        canvas {
+            border: 1px solid black;
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Canvas page</h3>
+    <p>draw on the canvas by clicking and dragging the mouse</p>
+    <header>
+        <article>
+            <h2>Canvas</h2>
+
+            <canvas id="mycanvas" width="400" height="400"></canvas>
+        </article>
+    </header>
+    <script>
+        var canvas = document.getElementById("mycanvas");
+        var ctx = canvas.getContext("2d");
+
+        var isDrawing = false;
+
+
+        function startDrawing(event) {
+            isDrawing = true;
+            var x = event.clientX - canvas.offsetLeft;
+            var y = event.clientY - canvas.offsetTop;
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+
+            event.preventDefault();
+        }
+
+
+        function drawline(event) {
+            if (isDrawing) {
+                var x = event.clientX - canvas.offsetLeft;
+                var y = event.clientY - canvas.offsetTop;
+                ctx.lineTo(x, y);
+                event.preventDefault();
+            }
+        }
+
+
+        function stopDrawing(event) {
+            isDrawing = false;
+
+            ctx.beginPath();
+            event.preventDefault();
+        }
+
+
+        canvas.addEventListener('mousedown', startDrawing);
+        canvas.addEventListener('mousemove', drawline);
+
+        canvas.addEventListener('mouseup', stopDrawing);
+
+        canvas.addEventListener('mouseout', stopDrawing);
+    </script>
+</body>
+
+</html>
